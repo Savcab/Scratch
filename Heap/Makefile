@@ -1,19 +1,20 @@
 G = g++
 GFLAGS = -g -Wall
+OBJECTS = test.o heap.o
+EFILE = test.exe
 
 all: test
 
-test: test.o heap.o
+test: $(OBJECTS)
 	$(G) $(GFLAGS) $^ -o $@
 
-test.o: test.cpp
-	$(G) $(GFLAGS) $^ -o $@ 
+test.o: test.cpp 
+	$(G) $(GFLAGS) $^ -o $@ -c
 
 heap.o: heap.cpp heap.h
-	$(G) $(GFLAGS) $^ -o $@
+	$(G) $(GFLAGS) $< -o $@ -c
 
 .PHONY: clean
 clean: 
-	rm -f *.o
-	rm -f test
-	echo All cleaned!
+	rm -rf $(OBJECTS) $(EFILE)
+	echo "All cleaned!"

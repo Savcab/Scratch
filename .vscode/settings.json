@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "exception": "cpp",
+        "xutility": "cpp",
+        "ostream": "cpp"
+    }
+}
