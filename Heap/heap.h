@@ -18,12 +18,13 @@ class Heap{
         //assignment operator
         Heap& operator=(const Heap& other);
         //add item to the heap
-        void push_back(T item);
+        void push(T item);
         //get the top element
         T top() const;
         //remove the topmost element
         void pop();
         void printHeap();
+        int size();
     private:
         std::vector<T> data;
         int getParent(int x) const;

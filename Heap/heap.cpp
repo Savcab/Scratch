@@ -55,6 +55,11 @@ template <class T>
 Heap<T>::~Heap(){
 }
 
+template <class T>
+int Heap<T>::size(){
+    return data.size();
+}
+
 /**
  * Helper function: returns the index of the parent function. -1 if none.
  * */
@@ -121,7 +126,7 @@ int Heap<T>::findMinChild(int index) const{
  * runtime = log(n)
  * */
 template <class T>
-void Heap<T>::push_back(T item){
+void Heap<T>::push(T item){
     data.push_back(item);
     //start the trickle up process
     int index = data.size()-1;

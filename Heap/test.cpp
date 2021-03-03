@@ -7,7 +7,7 @@ int main(){
     Heap<int> h = Heap<int>();
     vector<int> ex = {9, 8, -1, -500, 90, 0, -59, 0, 0, -1, -1, 500, -59, 8};
     for(vector<int>::iterator it = ex.begin() ; it != ex.end(); it++){
-        h.push_back(*it);
+        h.push(*it);
         h.printHeap();
     }
 
