@@ -10,7 +10,7 @@ class Heap{
         //default constructor
         Heap();
         //constructor with list
-//        Heap(const list<T>& lst);
+        //Heap(const list<T>& lst);
         //copy contructor
         Heap(const Heap& other);
         //deconstructor
@@ -32,5 +32,7 @@ class Heap{
         int getRChild(int x) const;
         int findMinChild(int index) const;
 };
+
+
 
 #endif
